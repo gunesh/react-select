@@ -76,7 +76,7 @@ export default function App() {
         name="taxid"
         isMulti={false}
         options={id}
-        // value={value}
+        value={value}
       />
     </div>
   );
