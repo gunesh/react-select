@@ -64,6 +64,7 @@ export default function App() {
       <Select
         className="basic-single"
         classNamePrefix="select"
+        placeholder= "Please Select..."
         defaultValue={msg === ''?id[0]:id[0]}
         isDisabled={msg === ''?false:true}
         isLoading={false}
