@@ -76,7 +76,6 @@ export default function App() {
         options={id}
         value={msg === '' ? value : null}
         onChange={e => {
-          console.log(e)
           setValue(e)
           onChangeTax(e);
         }}
