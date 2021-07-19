@@ -24,7 +24,6 @@ export default function App() {
         tmp.push(b)
       })
       console.log(tmp)
-    
       setId(tmp);
     } else {
       setMsg('There is no TaxID ');
