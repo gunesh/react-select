@@ -10,9 +10,9 @@ const options = [
   { value: 'no-tax', label: 'No TaxID', taxid: [] }
 ];
 export default function App() {
-  const onChange = (a) =>{
-    console.log(a)
-  }
+  const onChange = a => {
+    console.log(a);
+  };
   return (
     <div>
       <Select
