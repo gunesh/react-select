@@ -66,12 +66,12 @@ export default function App() {
         className="basic-single"
         classNamePrefix="select"
         placeholder= {id.length>0 && msg?msg:"Please Select..."}
-        defaultValue={msg === ''?id[0]:id[0]}
+        // defaultValue={value}
+        // defaultInputValue={value}
         isDisabled={msg === ''?false:true}
         isLoading={false}
         isClearable={true}
         isRtl={false}
-        // value={value}
         isSearchable={true}
         name="taxid"
         isMulti={false}
