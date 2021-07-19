@@ -12,6 +12,7 @@ const options = [
 export default function App() {
   const [msg, setMsg] = useState('There is no TaxID ');
   const [id, setId] = useState([]);
+  const [value, setValue] = useState("one");
 
   const CustomOption = ({ innerProps, isDisabled }) =>
   !isDisabled ? (
@@ -68,6 +69,7 @@ export default function App() {
         isLoading={false}
         isClearable={true}
         isRtl={false}
+        // value={value}
         isSearchable={true}
         name="taxid"
         isMulti={false}
