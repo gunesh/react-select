@@ -24,7 +24,6 @@ export default function App() {
     setValue(e.value);
   };
   const onChange = a => {
-    console.log(a);
     setValue(a.value);
     if (a.taxid.length > 0) {
       setMsg('');
@@ -35,7 +34,6 @@ export default function App() {
         b.label = i;
         tmp.push(b);
       });
-      console.log(tmp);
       setId(tmp);
     } else {
       setMsg('There is no TaxID ');
