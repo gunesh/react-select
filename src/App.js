@@ -3,6 +3,7 @@ import Select from 'react-select';
 
 import './style.css';
 const options = [
+  { value: 'chocolate1', label: 'Chocolate1' },
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'vanilla', label: 'Vanilla' }
