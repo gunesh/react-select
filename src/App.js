@@ -55,8 +55,8 @@ export default function App() {
       <Select
         className="basic-single"
         classNamePrefix="select"
-        defaultValue={}
-        isDisabled={false}
+        defaultValue={msg === ''?id[0]:id[0]}
+        isDisabled={msg === ''?false:true}
         isLoading={false}
         isClearable={true}
         isRtl={false}
