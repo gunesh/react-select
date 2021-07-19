@@ -32,6 +32,7 @@ export default function App() {
       });
       setId(tmp);
     } else {
+      setValue(null)
       setMsg('There is no TaxID ');
       setId([{ value: 'no-taxid', label: 'There is no TaxID' }]);
     }
@@ -73,7 +74,7 @@ export default function App() {
         name="taxid"
         isMulti={false}
         options={id}
-        // value={value}
+        // value={msg === '' ? value : null}
         onChange={e => {
           console.log(e)
           setValue(e.value)
