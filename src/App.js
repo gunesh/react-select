@@ -14,11 +14,6 @@ export default function App() {
   const [id, setId] = useState([]);
   const [value, setValue] = useState(null);
 
-  const CustomOption = ({ innerProps, isDisabled }) =>
-    !isDisabled ? (
-      <div {...innerProps}>{/* your component internals */}</div>
-    ) : null;
-
   const onChangeTax = e => {
     console.log(e);
     setValue(e.value);
