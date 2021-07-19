@@ -16,11 +16,11 @@ export default function App() {
 
   const onChangeTax = e => {
     console.log(e);
-    setValue(e.value);
+    setValue(e);
     console.log(e.value);
   };
   const onChange = a => {
-    setValue(a.value);
+    setValue(null)
     if (a.taxid.length > 0) {
       setMsg('');
       let tmp = [];
@@ -32,7 +32,7 @@ export default function App() {
       });
       setId(tmp);
     } else {
-      setValue(null)
+      
       setMsg('There is no TaxID ');
       setId([{ value: 'no-taxid', label: 'There is no TaxID' }]);
     }
@@ -77,7 +77,7 @@ export default function App() {
         value={msg === '' ? value : null}
         onChange={e => {
           console.log(e)
-          setValue(e.value)
+          setValue(e)
           onChangeTax(e);
         }}
       />
