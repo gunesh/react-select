@@ -64,7 +64,7 @@ export default function App() {
         className="basic-single"
         classNamePrefix="select"
         placeholder={id.length > 0 && msg ? msg : 'Please Select...'}
-        defaultValue={value}
+        // defaultValue={'value'}
         // defaultInputValue={value}
         isDisabled={msg === '' ? false : true}
         isLoading={false}
@@ -74,7 +74,7 @@ export default function App() {
         name="taxid"
         isMulti={false}
         options={id}
-        // value={msg === '' ? value : null}
+        value={msg === '' ? value : null}
         onChange={e => {
           console.log(e)
           setValue(e.value)
