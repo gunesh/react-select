@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Select from 'react-select';
 
 import './style.css';
@@ -10,13 +10,21 @@ const options = [
   { value: 'no-tax', label: 'No TaxID', taxid: [] }
 ];
 export default function App() {
+  const [msg, setMsg] = useState('There is no TaxID ');
+  const [id, setId] = useState([]);
   const onChange = a => {
     console.log(a);
+    setId(a.taxid)
+    if(a.taxid.length > 0){
+      setMsg('')
+    }else{
+      setMsg('There is no TaxID ')
+    }
   };
   return (
     <div>
       <br />
-     <br />
+      <br />
       <Select
         className="basic-single"
         classNamePrefix="select"
@@ -26,15 +34,28 @@ export default function App() {
         isClearable={true}
         isRtl={false}
         isSearchable={true}
-        name="color"
+        name="org"
         isMulti={false}
         options={options}
         onChange={onChange}
       />
 
-     <br />
-     <br />
-     
+      <br />
+      <br />
+      <Select
+          className="basic-single"
+          classNamePrefix="select"
+          defaultValue={options[0]}
+          isDisabled={false}
+          isLoading={false}
+          isClearable={true}
+          isRtl={false}
+          isSearchable={true}
+          name="taxid"
+          isMulti={false}
+          options={id}
+          onChange={onChange}
+        />
     </div>
   );
 }
