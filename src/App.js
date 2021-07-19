@@ -3,7 +3,7 @@ import Select from 'react-select';
 
 import './style.css';
 const options = [
-  { value: 'chocolate1', label: 'Chocolate1', taxid: ['a', 'b', 'c'] },
+  { value: 'chocolate1', label: 'Chocolate1', taxid: ['a', 'b', 'c']},
   { value: 'chocolate', label: 'Chocolate', taxid: ['a1', 'b1', 'c1'] },
   { value: 'strawberry', label: 'Strawberry', taxid: ['a2', 'b2', 'c2'] },
   { value: 'vanilla', label: 'Vanilla', taxid: ['a3', 'b3', 'c3'] },
@@ -14,11 +14,13 @@ export default function App() {
   const [id, setId] = useState([]);
   const onChange = a => {
     console.log(a);
-    setId(a.taxid)
-    if(a.taxid.length > 0){
-      setMsg('')
-    }else{
-      setMsg('There is no TaxID ')
+
+    if (a.taxid.length > 0) {
+      setMsg('');
+      setId(a.taxid);
+    } else {
+      setMsg('There is no TaxID ');
+      setId([{ value: 'no-taxid', label: 'There is no TaxID' }]);
     }
   };
   return (
@@ -43,19 +45,18 @@ export default function App() {
       <br />
       <br />
       <Select
-          className="basic-single"
-          classNamePrefix="select"
-          defaultValue={options[0]}
-          isDisabled={false}
-          isLoading={false}
-          isClearable={true}
-          isRtl={false}
-          isSearchable={true}
-          name="taxid"
-          isMulti={false}
-          options={id}
-          onChange={onChange}
-        />
+        className="basic-single"
+        classNamePrefix="select"
+        defaultValue={}
+        isDisabled={false}
+        isLoading={false}
+        isClearable={true}
+        isRtl={false}
+        isSearchable={true}
+        name="taxid"
+        isMulti={false}
+        options={id}
+      />
     </div>
   );
 }
