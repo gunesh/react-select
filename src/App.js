@@ -12,11 +12,12 @@ const options = [
 export default function App() {
   const [msg, setMsg] = useState('There is no TaxID ');
   const [id, setId] = useState([]);
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState('');
 
   const onChangeTax = e => {
     console.log(e);
     setValue(e.value);
+    console.log(e.value);
   };
   const onChange = a => {
     setValue(a.value);
@@ -72,8 +73,12 @@ export default function App() {
         name="taxid"
         isMulti={false}
         options={id}
-        value={value}
-        onChange={onChangeTax}
+        // value={value}
+        onChange={e => {
+          console.log(e)
+          setValue(e.value)
+          onChangeTax(e);
+        }}
       />
     </div>
   );
