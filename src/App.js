@@ -20,13 +20,14 @@ export default function App() {
       <Select
         className="basic-single"
         classNamePrefix="select"
-        defaultValue={options[0]}
+        // defaultValue={options[0]}
         isDisabled={false}
         isLoading={false}
         isClearable={true}
         isRtl={false}
         isSearchable={true}
         name="color"
+        isMulti
         options={options}
         onChange={onChange}
       />
