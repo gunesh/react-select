@@ -27,7 +27,7 @@ export default function App() {
         isRtl={false}
         isSearchable={true}
         name="color"
-        isMulti
+        isMulti={false}
         options={options}
         onChange={onChange}
       />
