@@ -14,7 +14,6 @@ export default function App() {
   const [id, setId] = useState([]);
   const onChange = a => {
     console.log(a);
-
     if (a.taxid.length > 0) {
       setMsg('');
       setId(a.taxid);
@@ -23,6 +22,16 @@ export default function App() {
       setId([{ value: 'no-taxid', label: 'There is no TaxID' }]);
     }
   };
+  const getOptionList = () =>{
+    let tmp = []
+    id.map((i)=>{
+      let b = {}
+      b.value = i;
+      b.label = i;
+      tmp.push(b)
+    })
+    return tmp;
+  }
   return (
     <div>
       <br />
@@ -55,7 +64,7 @@ export default function App() {
         isSearchable={true}
         name="taxid"
         isMulti={false}
-        options={id}
+        options={getOptionList}
       />
     </div>
   );
