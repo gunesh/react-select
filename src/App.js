@@ -12,7 +12,7 @@ const options = [
 export default function App() {
   const [msg, setMsg] = useState('There is no TaxID ');
   const [id, setId] = useState([]);
-  const [value, setValue] = useState("one");
+  const [value, setValue] = useState(null);
 
   const CustomOption = ({ innerProps, isDisabled }) =>
   !isDisabled ? (
@@ -22,6 +22,7 @@ export default function App() {
   
   const onChange = a => {
     console.log(a);
+    setValue(a.value)
     if (a.taxid.length > 0) {
       setMsg('');
       let tmp = []
@@ -75,6 +76,7 @@ export default function App() {
         name="taxid"
         isMulti={false}
         options={id}
+        value={value}
       />
     </div>
   );
