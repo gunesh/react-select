@@ -21,6 +21,7 @@ export default function App() {
 
   const onChangeTax = e =>{
     console.log(e)
+    setValue(e.value)
   }
   const onChange = a => {
     console.log(a);
