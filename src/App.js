@@ -3,16 +3,14 @@ import Select from 'react-select';
 
 import './style.css';
 const options = [
-  { value: 'chocolate1', label: 'Chocolate1' },
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' }
+  { value: 'chocolate1', label: 'Chocolate1',taxid:['a','b','c'] },
+  { value: 'chocolate', label: 'Chocolate',taxid:['a1','b1','c1'] },
+  { value: 'strawberry', label: 'Strawberry',taxid:['a2','b2','c2'] },
+  { value: 'vanilla', label: 'Vanilla',taxid:['a3','b3','c3'] }
 ];
 export default function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
       <Select
         className="basic-single"
         classNamePrefix="select"
