@@ -46,7 +46,7 @@ export default function App() {
         className="basic-single"
         classNamePrefix="select"
         // defaultValue={options[0]}
-        defaultInputValue="Please Select Org"
+        // defaultInputValue="Please Select Org"
         isDisabled={false}
         isLoading={false}
         isClearable={true}
