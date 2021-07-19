@@ -12,6 +12,13 @@ const options = [
 export default function App() {
   const [msg, setMsg] = useState('There is no TaxID ');
   const [id, setId] = useState([]);
+
+  const CustomOption = ({ innerProps, isDisabled }) =>
+  !isDisabled ? (
+    <div {...innerProps}>{/* your component internals */}</div>
+  ) : null;
+
+  
   const onChange = a => {
     console.log(a);
     if (a.taxid.length > 0) {
@@ -39,6 +46,7 @@ export default function App() {
         className="basic-single"
         classNamePrefix="select"
         // defaultValue={options[0]}
+        defaultInputValue="Please Select Org"
         isDisabled={false}
         isLoading={false}
         isClearable={true}
