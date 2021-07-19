@@ -16,22 +16,22 @@ export default function App() {
     console.log(a);
     if (a.taxid.length > 0) {
       setMsg('');
-      setId(a.taxid);
+      let tmp = []
+      id.length >0 && id.map((i)=>{
+        let b = {}
+        b.value = i;
+        b.label = i;
+        tmp.push(b)
+      })
+      console.log(tmp)
+    
+      setId(tmp);
     } else {
       setMsg('There is no TaxID ');
       setId([{ value: 'no-taxid', label: 'There is no TaxID' }]);
     }
   };
-  const getOptionList = () =>{
-    let tmp = []
-    id.map((i)=>{
-      let b = {}
-      b.value = i;
-      b.label = i;
-      tmp.push(b)
-    })
-    return tmp;
-  }
+  
   return (
     <div>
       <br />
@@ -64,7 +64,7 @@ export default function App() {
         isSearchable={true}
         name="taxid"
         isMulti={false}
-        options={getOptionList}
+        options={id}
       />
     </div>
   );
