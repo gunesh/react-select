@@ -69,7 +69,7 @@ export default function App() {
         className="basic-single"
         classNamePrefix="select"
         placeholder= {id.length>0 && msg?msg:"Please Select..."}
-        // defaultValue={value}
+        defaultValue={value}
         // defaultInputValue={value}
         isDisabled={msg === ''?false:true}
         isLoading={false}
