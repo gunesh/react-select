@@ -15,6 +15,8 @@ export default function App() {
   };
   return (
     <div>
+      <br />
+     <br />
       <Select
         className="basic-single"
         classNamePrefix="select"
@@ -28,6 +30,10 @@ export default function App() {
         options={options}
         onChange={onChange}
       />
+
+     <br />
+     <br />
+     
     </div>
   );
 }
