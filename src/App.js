@@ -17,7 +17,7 @@ export default function App() {
     if (a.taxid.length > 0) {
       setMsg('');
       let tmp = []
-      id.length >0 && id.map((i)=>{
+      a.taxid.map((i)=>{
         let b = {}
         b.value = i;
         b.label = i;
