@@ -19,7 +19,9 @@ export default function App() {
     <div {...innerProps}>{/* your component internals */}</div>
   ) : null;
 
-  
+  const onChangeTax = e =>{
+    console.log(e)
+  }
   const onChange = a => {
     console.log(a);
     setValue(a.value)
@@ -77,6 +79,7 @@ export default function App() {
         isMulti={false}
         options={id}
         value={value}
+        onChange={onChangeTax}
       />
     </div>
   );
