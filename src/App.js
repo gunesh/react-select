@@ -15,9 +15,7 @@ export default function App() {
   const [value, setValue] = useState('');
 
   const onChangeTax = e => {
-    console.log(e);
     setValue(e);
-    console.log(e.value);
   };
   const onChange = a => {
     setValue(null)
@@ -32,7 +30,6 @@ export default function App() {
       });
       setId(tmp);
     } else {
-      
       setMsg('There is no TaxID ');
       setId([{ value: 'no-taxid', label: 'There is no TaxID' }]);
     }
